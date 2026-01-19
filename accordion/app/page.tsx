@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <>
     <main className="min-h-screen bg-[#f9f0ff]">
-      <div className="h-[320px] w-full bg-[url('/images/background-pattern-desktop.svg')] bg-no-repeat bg-cover bg-top"/>
+      <div className="h-80 w-full bg-[url('/images/background-pattern-desktop.svg')] bg-no-repeat bg-cover bg-top"/>
       
-      <div className="w-full flex justify-center px-4 -mt-[180px] pb-20">
-          <div className="bg-white w-full max-w-[540px] rounded-xl shadow-xl px-6 py-10">
+      <div className="w-full flex justify-center px-4 -mt-45 pb-20">
+          <div className="bg-white w-full max-w-135 rounded-xl shadow-xl px-6 py-10">
             {/* icon + 제목 */}
             <div className="flex items-center gap-4 mb-6">
               <img src="/images/icon-star.svg" alt="star icon" />

@@ -5,12 +5,12 @@ import { linkData } from "./data/linkData";
 export default function Home() {
   return (
     <main className="min-h-screen bg-black flex items-center justify-center">
-      <div className="text-white h-150 min-w-100 bg-gray-800 flex flex-col items-center gap-5 rounded-lg">
+      <div className="text-white max-w-sm w-[90%] md:max-w-md p-6 bg-gray-800 flex flex-col items-center gap-5 rounded-lg">
         <div className="mt-12.5">
           <Image
             alt="profile"
-            width="90"
-            height="75"
+            width={90}
+            height={75}
             src={"/images/avatar-jessica.jpeg"}
             className="rounded-full"
           />
