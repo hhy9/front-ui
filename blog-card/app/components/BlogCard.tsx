@@ -25,7 +25,7 @@ export const BlogCard = ({
       <div className="flex flex-col gap-3">
         <div className="px-3 py-1 text-gray-950 font-extrabold bg-yellow-300 w-fit rounded-sm text-[12px] leading-[150%]">{category}</div>
         <div className="text-[12px] font-medium leading-[150%] text-gray-950">{date}</div>
-        <div className="font-extrabold text-[20px] leading-[150%] text-gray-950">{title}</div>
+        <div className="font-extrabold text-[20px] leading-[150%] text-gray-950 hover:text-yellow-300">{title}</div>
         <div className="text-sm leading-[150%] font-medium text-gray-500">{description}</div>
       </div>
       <div className="flex gap-3 items-center">
