@@ -24,3 +24,31 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer base {
+  /* Young Serif */
+  @font-face {
+    font-family: 'Young Serif';
+    font-weight: 400;
+    src: url('../assets/fonts/YoungSerif-Regular.ttf') format('truetype');
+  }
+
+  /* Outfit */
+  @font-face {
+    font-family: 'Outfit';
+    font-weight: 400;
+    src: url('../assets/fonts/Outfit-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Outfit';
+    font-weight: 600;
+    src: url('../assets/fonts/Outfit-SemiBold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Outfit';
+    font-weight: 700;
+    src: url('../assets/fonts/Outfit-Bold.ttf') format('truetype');
+  }
+}

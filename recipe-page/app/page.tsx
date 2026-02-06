@@ -2,12 +2,13 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-7">
-      <div className="relative w-full h-40">
+    <div className="md:flex md:justify-center md:bg-[#f3e5d8] md:py-30">
+    <div className="font-outfit font-normal flex flex-col gap-7 bg-white rounded-lg md:p-10 md:max-w-180">
+      <div className="relative w-full h-40 md:h-75">
         <Image
           src="/images/image-omelette.jpeg"
           alt="recipeImage"
-          className="object-cover"
+          className="object-cover rounded-lg"
           fill
         />
       </div>
@@ -123,6 +124,7 @@ export default function Home() {
           </li>
         </ul>
       </div>
+    </div>
     </div>
   );
 }
