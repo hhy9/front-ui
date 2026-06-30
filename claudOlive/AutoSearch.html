@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .container { position: relative; width: 300px; }
+    input { width: 100%; padding: 8px; box-sizing: border-box; }
+    .dropdown {
+      position: absolute;
+      width: 100%;
+      border: 1px solid #ccc;
+      background: white;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .dropdown li { padding: 8px; cursor: pointer; }
+    .dropdown li:hover { background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="text" id="searchInput" placeholder="검색어를 입력하세요" />
+    <ul class="dropdown" id="dropdown"></ul>
+  </div>
+
+  <script>
+    async function mockSearch(query) {
+      await new Promise(res => setTimeout(res, 200));
+      return ['올리브영 선크림', '올리브영 마스크팩', '올리브영 비타민']
+        .filter(item => item.includes(query));
+    }
+
+    const input = document.getElementById('searchInput');
+    const dropdown = document.getElementById('dropdown');
+    let timer = null; // ⭐ debounce 핵심
+
+    input.addEventListener('input', (e) => {
+      clearTimeout(timer); // ⭐ 이전 타이머 취소
+
+      const query = e.target.value;
+      if (!query) {
+        dropdown.innerHTML = '';
+        return;
+      }
+
+      timer = setTimeout(async () => { // ⭐ 300ms 후에 실행
+        const results = await mockSearch(query);
+        dropdown.innerHTML = results
+          .map(item => `<li>${item}</li>`)
+          .join('');
+
+        // 클릭하면 input에 채우기
+        dropdown.querySelectorAll('li').forEach(li => {
+          li.addEventListener('click', () => {
+            input.value = li.textContent;
+            dropdown.innerHTML = '';
+          });
+        });
+      }, 300);
+    });
+  </script>
+</body
+</html>
